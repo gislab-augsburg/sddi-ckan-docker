@@ -52,6 +52,8 @@ FROM ${BASEIMAGE_REPOSITORY}:${BASEIMAGE_VERSION} as runtime
 
 USER root
 
+RUN apt-get update && apt-get install -y wget
+
 ENV CKAN__PLUGINS "image_view text_view recline_view datastore datapusher \
   hierarchy_display hierarchy_form display_group relation \
   spatial_metadata spatial_query datesearch repeating composite scheming_datasets \

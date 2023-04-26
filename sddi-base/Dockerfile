@@ -133,6 +133,8 @@ ENV TZ="UTC"
 
 USER root
 
+RUN apt-get update && apt-get install -y wget
+
 # Install any system packages necessary to build extensions
 RUN set -ex && \
   apt-get update && \
